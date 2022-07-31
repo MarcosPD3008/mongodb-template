@@ -1,2 +1,5 @@
-# nodejs_mongodb_template
- a base template made with node js and mongodb
+#enviroment variables
+    * server_port : the port of the server
+    * server_timeout : the timeout of a petition
+    * MONGO_URL : the url of the mongo database
+    * MONGO_DATABASE : the name of the database    
