@@ -1,8 +1,9 @@
 import { Router } from 'express';
 import { NotesController } from '../controllers/notes/notes.controller';
+import { container } from "tsyringe";
 
 const router = Router();   
-const notes = new NotesController();
+const notes = container.resolve(NotesController);
 
 router.get('/', notes.Get);
 router.get('/:id', notes.Find);

@@ -1,6 +1,5 @@
 import { Note } from "../../models/note.models";
 import { NotesServices } from "../../services/index.services";
-
 import {container, injectable} from "tsyringe";
 import BaseController from "../base/base.controller";
 
@@ -9,8 +8,7 @@ export class NotesController extends BaseController<Note>{
     service!:NotesServices;
 
     constructor(){
-        const service = container.resolve(NotesServices);
-        super(service);
+        super(container.resolve(NotesServices));
     }
 }
 

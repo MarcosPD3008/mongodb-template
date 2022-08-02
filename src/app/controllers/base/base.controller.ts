@@ -5,7 +5,7 @@ import { IBaseService } from "../../services/index.services";
 export default abstract class BaseController<T>{
     service!:IBaseService<T>
 
-    constructor(service:any){
+    constructor(service:IBaseService<T>){
         this.service = service;
     }
 
